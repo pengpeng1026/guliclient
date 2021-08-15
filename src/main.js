@@ -15,7 +15,13 @@ import router from './router'
 import '@/icons' // icon
 import '@/permission' // permission control
 
-import * as API from '@/api/product/index'
+import * as API from '@/api/index'
+
+// 注册全局公共组件
+import CategoryList from '@/components/CategoryList'
+import HintButton from '@/components/HintButton'
+Vue.component('CategoryList',CategoryList)
+Vue.component('HintButton',HintButton)
 
 /**
  * If you don't want to use mock-server

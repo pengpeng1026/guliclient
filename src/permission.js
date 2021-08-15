@@ -20,6 +20,8 @@ router.beforeEach(async(to, from, next) => {
   // determine whether the user has logged in
   const hasToken = getToken()
 
+  // token校验 在导航守卫里面进行，发生路由跳转的时候判断token存不存在，如果存在的话判断用户信息（名字）存不存在
+  // 如果用户信息不存在，就dispatch获取用户信息的函数
   if (hasToken) {
     if (to.path === '/login') {
       // if is logged in, redirect to the home page

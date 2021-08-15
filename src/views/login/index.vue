@@ -106,6 +106,7 @@ export default {
         this.$refs.password.focus()
       })
     },
+    // 点击登录按钮,跳转到首页
     handleLogin() {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
